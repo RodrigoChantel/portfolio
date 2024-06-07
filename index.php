@@ -42,7 +42,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        
+                        <?php include_once("Layouts/themes/default/pages/portfolio.php"); ?>
                     </div>
                 </div>
             </div>
@@ -53,4 +53,8 @@
 <script src="Assets/JS/bootstrap.bundle.js"></script>
 <script src="Assets/JS/fontawesome.js"></script>
 <script src="Assets/JS/popper.min.js"></script>
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
 </html>
