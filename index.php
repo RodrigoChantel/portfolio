@@ -34,15 +34,21 @@
                     <hr class="text-secondary">
                     <div class="col-md-12">
                         <ul class="nav justify-content-center">
-                            <li class="nav-item"><a class="nav-link text-danger" href="#"><i class="fa-solid fa-bars"></i> Portfolio</a></li>
-                            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fa-solid fa-user"></i> About me</a></li>
-                            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                            <li id="portfolio" class="nav-item"><a id="portfolioLink" class="nav-link text-white" href="#"><i class="fa-solid fa-bars"></i> Portfolio</a></li>
+                            <li id="about" class="nav-item"><a id="aboutLink" class="nav-link text-white" href="#"><i class="fa-solid fa-user"></i> About me</a></li>
+                            <li id="contact" class="nav-item"><a id="contactLink" class="nav-link text-white" href="#"><i class="fa-solid fa-envelope"></i> Contact</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        
+                    <div id="contentAbout" class="col-md-12" style="display: none;">
+                        <?php include_once('about.php'); ?>
+                    </div>
+                    <div id="contentPortfolio" class="col-md-12" style="display: none;">
+                        <?php include_once('portfolio.php'); ?>
+                    </div>
+                    <div id="contentContact" class="col-md-12" style="display: none;">
+                        <?php include_once('about.php'); ?>
                     </div>
                 </div>
             </div>
@@ -53,4 +59,5 @@
 <script src="Assets/JS/bootstrap.bundle.js"></script>
 <script src="Assets/JS/fontawesome.js"></script>
 <script src="Assets/JS/popper.min.js"></script>
+<script src="Assets/Js/contents.js"></script>
 </html>
