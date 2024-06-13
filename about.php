@@ -19,17 +19,23 @@
         <div class="col-md-12">
             <div class="bg-white rounded rounded-2 p-2" style="width: 550px; height: 400px;">
                 <div class="row">
-                    <div class="col-md-12 d-flex justify-content-end">
+                    <div class="col-md-12">
                         <span class="text-black me-2">Digite um número entre 1 e 100</span>
                         <input class="rounded rounded-2" id="data" type="number" placeholder="Digite o número aqui">
                         <button class="rounded rounded-2" onclick="insertData()">Adicionar</button>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 pt-3">
-                        <select class="w-50 rounded rounded-2" name="showData" id="showData" size="9">
+                    <div class="col-md-6 pt-3">
+                        <select class="w-100 rounded rounded-2" name="showData" id="showData" size="9">
                             
                         </select>
+                        <div>
+                            <button id="results" onclick="results()" class="btn btn-success">Finalizar</button>
+                        </div>
+                    </div>
+                    <div id="showResults" class="col-md-6 pt-3">
+                        
                     </div>
                 </div>
             </div>
@@ -37,6 +43,8 @@
     </div>
 
     <script>
+
+            let values = [];
 
             function isNumber(n) {
                 if(Number(n) >= 1 && Number(n) <= 100){
@@ -47,7 +55,7 @@
             }
 
             function onList(n, l) {
-                if(l.indexOf(Number(n)) !== -1){
+                if(l.indexOf(Number(n)) != -1){
                     return true;
                 }else{
                     return false;
@@ -59,13 +67,53 @@
                 let data = document.getElementById('data');
                 let showData = document.getElementById('showData');
                 let newOption  = document.createElement('option');
-                let values = [];
 
                 if (isNumber(data.value) && !onList(data.value, values)) {
-                    window.alert('Tudo ok');
+                    values.push(Number(data.value));
+
+                    newOption.text = 'Valor ' + data.value + ' foi adicionado';
+                    newOption.value = values;
+
+                    showData.add(newOption);
                 }else{
                     window.alert('O valor é inválido ou já está na lista.');
                 }
+
+                data.value = '';
+                data.focus();
+            }
+
+            // calcular resultados
+
+            function results() {
+                if(values.length == 0){
+                    window.alert('Adicione valores antes de finalizar');
+                }else{
+                    const allNumbers = values;
+                    let soma = 0;
+                    let showResults = document.getElementById('showResults');
+                    let totalLines = allNumbers.length;
+                    let maior = values[0];
+                    let menor = values[0];
+
+                    for (let i = 0; i<allNumbers.length; i++){
+                        soma +=allNumbers[i];
+                    }
+
+                    for(let pos in values){
+                        if(values[pos] > maior)
+                            maior = values[pos];
+                        if(values[pos] < menor)
+                            menor = values[pos];
+                    }
+
+                    showResults.innerHTML = '';
+                    showResults.innerHTML += '<p>Existem ' + totalLines + ' valores adicionados</p>';
+                    showResults.innerHTML += `<p>O maior valor é ${maior}</p>`;
+                    showResults.innerHTML += `<p>O menor valor é ${menor}</p>`;
+                    showResults.innerHTML += '<p>A soma total dos valores é ' + soma + '</p>';
+                }
+
             }
     </script>
 
