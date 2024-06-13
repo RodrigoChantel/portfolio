@@ -17,9 +17,58 @@
     </div>
     <div class='row'>
         <div class="col-md-12">
-            about
+            <div class="bg-white rounded rounded-2 p-2" style="width: 550px; height: 400px;">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-end">
+                        <span class="text-black me-2">Digite um número entre 1 e 100</span>
+                        <input class="rounded rounded-2" id="data" type="number" placeholder="Digite o número aqui">
+                        <button class="rounded rounded-2" onclick="insertData()">Adicionar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 pt-3">
+                        <select class="w-50 rounded rounded-2" name="showData" id="showData" size="9">
+                            
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+
+            function isNumber(n) {
+                if(Number(n) >= 1 && Number(n) <= 100){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+            function onList(n, l) {
+                if(l.indexOf(Number(n)) !== -1){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+            function insertData() {
+
+                let data = document.getElementById('data');
+                let showData = document.getElementById('showData');
+                let newOption  = document.createElement('option');
+                let values = [];
+
+                if (isNumber(data.value) && !onList(data.value, values)) {
+                    window.alert('Tudo ok');
+                }else{
+                    window.alert('O valor é inválido ou já está na lista.');
+                }
+            }
+    </script>
+
 
 <?php
         echo $endMain; //Finaliza o main
