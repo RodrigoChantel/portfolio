@@ -22,7 +22,8 @@ $endSection = "
     <script src='Assets/JS/bootstrap.bundle.js'></script>
     <script src='Assets/JS/fontawesome.js'></script>
     <script src='Assets/JS/popper.min.js'></script>
-    <script src='Assets/Js/custom.js'></script>  
+    <script src='Assets/Js/popover.js'></script>
+    <script src='Assets/Js/load-page.js'></script>  
     </html>
 ";
 
