@@ -15,32 +15,45 @@
             </ul>
         </div>
     </div>
-   <div class="row">
-        <div class="col-md-12 text-white">
-            <p>
-                Tenho 27 anos e sou desenvolvedor back end. Além de meu foco principal, também possuo habilidades em desenvolvimento 
-                front end. Tenho conhecimentos básicos em MySQL e SQL Server, e as tecnologias que utilizo incluem HTML, CSS, e 
-                JavaScript, frequentemente com os frameworks Bootstrap e Laravel. Em breve, pretendo me tornar um programador full 
-                stack, iniciando meu aprendizado com Vue.
-            </p>
-            <p>
-                Entre meus projetos pessoais que comprovam minha experiência com desenvolvimento, destaco o site e sistema da Kristta. 
-                O que começou como um projeto de portfólio transformou-se em minha fonte de renda extra. Juntamente com dois sócios, 
-                Wilkerson Berg e Weslei Santos, formamos a agência de marketing Kristta. Através do site www.kristta.com.br, oferecemos 
-                serviços de criação de sites, pequenos sistemas, criação de identidade visual, estratégia de marketing geral e tráfego 
-                pago, embora este último não seja nosso foco principal.
-            </p>
-            <p>
-                Estou cursando Ciências da Computação, com previsão de término em agosto de 2025, e pretendo fazer uma pós-graduação 
-                logo após concluir a graduação.
-            </p>
-            <p>
-                Sou pai de um garoto chamado André, atualmente com dois anos e meio de idade, que é minha maior fonte de alegria, 
-                junto com minha esposa.
-            </p>
+    <div class='row'>
+        <div class="col-md-12">
+            <div class="bg-white rounded rounded-2 p-2" style="width: 500px; height: 400px;">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-end">
+                        <span class="text-black">Digite um número entre 1 e 100</span>
+                        <input class="rounded rounded-2" id="data" type="number" placeholder="Digite o número aqui">
+                        <button class="rounded rounded-2" onclick="insertData()">Adicionar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 pt-3">
+                        <select class="w-50 rounded rounded-2" name="showData" id="showData" size="9">
+                            
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
-   </div>
+    </div>
 
+    <script>
+            function isNumber(n) {
+                
+            }
+
+            function insertData() {
+                var data = document.getElementById('data').value;
+                var showData = document.getElementById('showData');
+                var newOption  = document.createElement('option');
+
+                if (isNumber(data.value) && !onList(data.value)) {
+                    newOption.value = data;
+                    newOption.text = data;
+
+                    showData.add(newOption);
+                }
+            }
+    </script>
 
 <?php
         echo $endMain; //Finaliza o main

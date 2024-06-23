@@ -1,0 +1,11 @@
+{
+    "nome": "Rodrigo",
+    "idade": 27,
+    "nascimento": "06/07/1996",
+    "vivo": true,
+    "habilidades": ["php", "hml", "css", "javascript"],
+    "detalhes": {
+        "profissao": "desenvolvedor",
+        "empresa": "kristta"
+    }
+}
