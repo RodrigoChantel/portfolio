@@ -1,6 +1,6 @@
 <?php
     $main = "
-        <main id='main'>
+        <main>
             <div>
                 <div class='container'>
                     <div class='row text-white py-5'>
@@ -9,7 +9,7 @@
                                 <p class='fs-1 p-0 m-0'>I'm Rodrigo Chantel</p>
                                 <h1>Back-end Developer</h1>
                                 <p class='w-75 d-flex justify-content-between'>
-                                    <span class='ps-1'><span class='text-danger'>2</span> projects</span>
+                                    <span class='ps-1'><span class='text-danger'>0</span> projects</span>
                                     <span class='ps-1'><span class='text-danger'>27</span> y/o</span>
                                     <span class='ps-1'><span class='text-danger'>He/His</span> pronouns</span>
                                 </p>
@@ -18,7 +18,7 @@
                             </div>
                         </div>
                         <div class='col-md-6 text-center d-flex justify-content-center align-items-center'>
-                            <img class='profile' src='Assets/images/Rodrigo-profile-ex.webp' alt=''>
+                            <img height='350' src='Assets/images/Rodrigo-profile-ex.webp' alt=''>
                         </div>
                     </div>
     ";
