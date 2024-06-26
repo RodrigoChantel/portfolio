@@ -1,5 +1,5 @@
-<header>
-    <div class="container w-sm-100 w-75">
+<header id="header">
+    <div class="container w-sm-100">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand indie-flower-regular" href="#">Rodrigo Chantel Hora</a>

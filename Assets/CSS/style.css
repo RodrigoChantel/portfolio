@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+#main{
+    display: none;
+}
+#header{
+    display: none;
+}
+#footer{
+    display: none;
+}
+#loading-box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .indie-flower-regular {
     font-family: "Indie Flower", cursive;
     font-weight: 400;
@@ -23,8 +39,15 @@ header a, span{
     background: linear-gradient(90deg, #171717, #232323);
 }
 
+.profile{
+    width: 350px;
+}
+
 @media screen and (max-width: 768px) {
     header .w-sm-100{
         width: 100% !important;
+    }
+    .profile{
+        width: 75%;
     }
 }

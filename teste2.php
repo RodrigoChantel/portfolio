@@ -8,6 +8,7 @@
 <body>
     <div id="field"></div>
     <div id="field2"></div>
+
     <script>
         let show = document.getElementById('field');
         let show2 = document.getElementById('field2');
