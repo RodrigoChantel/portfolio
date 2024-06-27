@@ -15,10 +15,26 @@
             </ul>
         </div>
     </div>
-    <div class='row my-3'>
-        <div class="col-md-6"></div>
-        <div class="col-md-6">
-            <form action="form-control">
+    <div class='row my-5'>
+        <div class="col-md-6 text-white">
+            <h3 class="mb-4">
+                Podemos conversar
+            </h3>
+            <a target="__blank" class="btn btn-dark text-center d-flex justify-content-center align-items-center w-100" href="#">
+                <span class="text-white" style="font-size: 40px;"><i class="fa-brands fa-whatsapp"></i></span>
+                <h4 class="ms-4">Whatsapp</h4>
+            </a>
+            <a class="btn btn-dark text-center mt-3 d-flex justify-content-center align-items-center w-100" id="copy-text">
+                <span class="text-white" style="font-size: 40px;"><i class="fa-solid fa-envelope"></i></span>
+                <h4 class="ms-4">rodrigo.hora@kristta.com.br</h4>
+            </a>
+            <a target="__blank" class="btn btn-dark contact-link-btn mt-3 text-center d-flex justify-content-center align-items-center w-100" href="https://www.kristta.com.br/">
+                <img src="Assets/images/icons/logowhite.png" alt="">
+            </a>
+        </div>
+        <div class="col-md-6 custom-mt text-white">
+            <h3 class="mb-3">Ou se preferir:</h3>
+            <form class="" action="form-control">
                 <div class="mb-3 text-white">
                     <label for="name" class="form-label">Nome</label>
                     <input type="text" class="form-control" id="email" name="name" placeholder="Informe seu nome">
@@ -47,7 +63,7 @@
                     <label for="message" class="form-label">Mensagem</label>
                     <textarea class="form-control" name="message" id="message" rows="3"></textarea>
                 </div>
-                <button class="btn btn-primary">Enviar</button>
+                <button class="btn btn-danger">Enviar</button>
             </form>
         </div>
     </div>

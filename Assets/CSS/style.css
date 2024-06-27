@@ -43,11 +43,18 @@ header a, span{
     width: 350px;
 }
 
+.contact-link-btn{
+    height: 75px !important;
+}
+
 @media screen and (max-width: 768px) {
     header .w-sm-100{
         width: 100% !important;
     }
     .profile{
         width: 75%;
+    }
+    .custom-mt{
+        margin-top: 50px !important;
     }
 }

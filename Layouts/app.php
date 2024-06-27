@@ -22,9 +22,10 @@ $endSection = "
     <script src='Assets/JS/bootstrap.bundle.js'></script>
     <script src='Assets/JS/fontawesome.js'></script>
     <script src='Assets/JS/popper.min.js'></script>
-    <script src='Assets/Js/custom.js'></script>
-    <script src='Assets/Js/loadingpage.js'></script>
-    <script src='Assets/Js/handlePhone.js'></script>
+    <script src='Assets/JS/custom.js'></script>
+    <script src='Assets/JS/loadingpage.js'></script>
+    <script src='Assets/JS/handlePhone.js'></script>
+    <script src='Assets/JS/copy-text.js'></script>
     </html>
 ";
 
