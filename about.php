@@ -16,8 +16,44 @@
         </div>
     </div>
     <div class='row'>
-        
+        <div class="col-md-12">
+            <div class="bg-white rounded rounded-2 p-2" style="width: 500px; height: 400px;">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-end">
+                        <span class="text-black">Digite um número entre 1 e 100</span>
+                        <input class="rounded rounded-2" id="data" type="number" placeholder="Digite o número aqui">
+                        <button class="rounded rounded-2" onclick="insertData()">Adicionar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 pt-3">
+                        <select class="w-50 rounded rounded-2" name="showData" id="showData" size="9">
+                            
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+            function isNumber(n) {
+                
+            }
+
+            function insertData() {
+                var data = document.getElementById('data').value;
+                var showData = document.getElementById('showData');
+                var newOption  = document.createElement('option');
+
+                if (isNumber(data.value) && !onList(data.value)) {
+                    newOption.value = data;
+                    newOption.text = data;
+
+                    showData.add(newOption);
+                }
+            }
+    </script>
 
 <?php
         echo $endMain; //Finaliza o main

@@ -10,6 +10,11 @@ $section = "
         <title>Rodrigo Chantel Hora</title>
     </head>
     <body class='bg-black-custom'>
+    <div id='loading-box'>
+        <div class='spinner-grow text-light' role='status'>
+            <span class='visually-hidden'>Loading...</span>
+        </div>
+    </div>
 ";
 
 $endSection = "
@@ -17,7 +22,10 @@ $endSection = "
     <script src='Assets/JS/bootstrap.bundle.js'></script>
     <script src='Assets/JS/fontawesome.js'></script>
     <script src='Assets/JS/popper.min.js'></script>
-    <script src='Assets/Js/contents.js'></script>    
+    <script src='Assets/JS/custom.js'></script>
+    <script src='Assets/JS/loadingpage.js'></script>
+    <script src='Assets/JS/handlePhone.js'></script>
+    <script src='Assets/JS/copy-text.js'></script>
     </html>
 ";
 
